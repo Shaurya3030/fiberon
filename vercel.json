@@ -1,11 +1,1 @@
-{
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "buildCommand": "pnpm build",
-  "outputDirectory": "dist",
-  "framework": "vite"
-}
+{"version": 1, "build": {"env": {"CONVEX_API_KEY": "your-api-key-here"}}}
