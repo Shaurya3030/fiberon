@@ -1,5 +1,5 @@
 import { useQuery, useMutation } from "convex/react";
-import { api } from "@/convex/_generated/api";
+import { api } from "../../convex/_generated/api";
 import { useEffect, useState, useRef, useMemo } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, Circle } from "lucide-react";

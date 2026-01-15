@@ -1,5 +1,5 @@
 import { useQuery } from "convex/react";
-import { api } from "@/convex/_generated/api";
+import { api } from "../../convex/_generated/api";
 import { motion } from "framer-motion";
 import { AlertTriangle, TrendingUp, ArrowRight, Shield, Activity } from "lucide-react";
 import { useNavigate } from "react-router";
