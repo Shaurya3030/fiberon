@@ -38,13 +38,13 @@ You must follow these conventions when using authentication.
 
 All convex authentication functions are already set up. The auth currently uses email OTP and anonymous users, but can support more.
 
-The email OTP configuration is defined in `src/convex/auth/emailOtp.ts`. DO NOT MODIFY THIS FILE.
+The email OTP configuration is defined in `convex/auth/emailOtp.ts`. DO NOT MODIFY THIS FILE.
 
-Also, DO NOT MODIFY THESE AUTH FILES: `src/convex/auth.config.ts` and `src/convex/auth.ts`.
+Also, DO NOT MODIFY THESE AUTH FILES: `convex/auth.config.ts` and `convex/auth.ts`.
 
 ## Using Convex Auth on the backend
 
-On the `src/convex/users.ts` file, you can use the `getCurrentUser` function to get the current user's data.
+On the `convex/users.ts` file, you can use the `getCurrentUser` function to get the current user's data.
 
 ## Using Convex Auth on the frontend
 
@@ -209,7 +209,7 @@ You will be implementing the convex backend. Follow your knowledge of convex and
 
 You must correctly follow the convex schema implementation.
 
-The schema is defined in `src/convex/schema.ts`.
+The schema is defined in `convex/schema.ts`.
 
 Do not include the `_id` and `_creationTime` fields in your queries (it is included by default for each table).
 Do not index `_creationTime` as it is indexed for you. Never have duplicate indexes.
@@ -251,7 +251,7 @@ When using convex, make sure:
 - Keep schemaValidation to false in the schema file.
 - You must correctly type your code so that it passes the type checker.
 - You must handle null / undefined cases of your convex queries for both frontend and backend, or else it will throw an error that your data could be null or undefined.
-- Always use the `@/folder` path, with `@/convex/folder/file.ts` syntax for importing convex files.
-- This includes importing generated files like `@/convex/_generated/server`, `@/convex/_generated/api`
+- For importing convex files in your application code (src/), use relative paths like `../../convex/_generated/api` or `../../convex/folder/file.ts`
+- Within the convex backend files, use relative paths to import other convex files (e.g., `./schema`, `./_generated/server`)
 - Remember to import functions like useQuery, useMutation, useAction, etc. from `convex/react`
 - NEVER have return type validators.
